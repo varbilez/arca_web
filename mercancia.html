@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mercancía - Arca</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="mercancia.css">
+  
+</head>
+<body>
+
+  <!-- Menús de esquina -->
+    <a href="index.html" class="corner-link top-left" style="font-size: 40px;">Inicio</a>
+    <a href="tours.html" class="corner-link top-right" style="font-size: 40px;">Tours</a>
+    <a href="visuales.html" class="corner-link bottom-left" style="font-size: 40px;">Visuales</a>
+
+
+  <!-- Logo -->
+  <img src="img/arca_logo-removebg-preview(2).png" alt="Logo" class="logo">
+
+    <!-- Título principal -->
+    <h1 style="font-size: 70px; cursor: default;">Merch</h1>
+
+    <!-- Sección de productos -->
+    <div class="products" style="font-family: syne;">
+      <div class="product" data-stock="0" onclick="location.href='producto.html?nombre=B-2023-18%20SS%20WHITE%20TEE&precio=USD45.00&imagen=https://d1rgjmn2wmqeif.cloudfront.net/r/b/424099-2.jpg'">
+        <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/424099-2.jpg" alt="White Tee" style="height: 300px; width: 300px; border-radius: 0;">
+        <div class="product-title" style="font-size: 20px; width: 302px;">B-2023-18 SS WHITE TEE</div>
+        <div class="Precio" style="width: 302px;">USD 45.00</div>
+        <div class="stock-status" style="width: 302px;"></div>
+        
+      </div>
+
+      <div class="product" data-stock="0" onclick="location.href='producto.html?nombre=B-2023-18%20SS%20BLACK%20TEE&precio=USD45.00&imagen=https://d1rgjmn2wmqeif.cloudfront.net/r/b/424111-1.jpg'">
+        <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/424111-1.jpg" alt="Black Tee" style="height: 300px; width: 300px; border-radius: 0;" onclick="goToProduct('B-2023-19 SS BLACK TEE', 45)">
+        <div class="product-title" style="font-size: 20px; width: 302px;">B-2023-19 SS BLACK TEE</div>
+        <div class="Precio" style="width: 302px;">USD 45.00</div>
+        <div class="stock-status" style="width: 302px;"></div>
+      </div>
+
+      <div class="product" data-stock="5" onclick="location.href='producto.html?nombre=MUTANT%20TEE%20WHITE&precio=USD45.00&imagen=https://d1rgjmn2wmqeif.cloudfront.net/r/b/382170-1.jpg'">
+        <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/382170-1.jpg" alt="Mutant White Tee" style="height: 300px; width: 300px; border-radius: 0;" onclick="goToProduct('MUTANT LOGO S/S TEE WHITE', 45)">
+        <div class="product-title" style="font-size: 20px; width: 302px;">MUTANT LOGO S/S TEE WHITE</div>
+        <div class="Precio" style="width: 302px;">USD 45.00</div>
+        <div class="stock-status" style="width: 302px;"></div>
+      </div>
+
+      <div class="product" data-stock="10" onclick="location.href='producto.html?nombre=MUTANT%20TEE%20BLACK&precio=USD45.00&imagen=https://d1rgjmn2wmqeif.cloudfront.net/r/b/382167-1.jpg'">
+        <img src="https://d1rgjmn2wmqeif.cloudfront.net/r/b/382167-1.jpg" alt="Mutant Black Tee" style="height: 300px; width: 300px; border-radius: 0;" onclick="goToProduct('MUTANT LOGO S/S TEE BLACK', 45)">
+        <div class="product-title" style="font-size: 20px; width: 302px;">MUTANT LOGO S/S TEE BLACK</div>
+        <div class="Precio" style="width: 302px;">USD 45.00</div>
+        <div class="stock-status" style="width: 302px;"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="redes-sociales">
+        <a href="https://open.spotify.com/intl-es/artist/4SQdUpG4f7UbkJG3cJ2Iyj" target="_blank"><i class="fab fa-spotify"></i></a>
+        <a href="https://x.com/arca1000000?lang=es" target="_blank"><i class="fab fa-x"></i></a>
+        <a href="https://www.instagram.com/arca1000000/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@arca1000000" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p style="font-size: 15px;">&copy; 2025 arca Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+    // Lógica para mostrar el estado del stock
+        document.querySelectorAll(".product").forEach(product => {
+        const stock = parseInt(product.getAttribute("data-stock"));
+        const statusEl = product.querySelector(".stock-status");
+        if (stock > 0) {
+            statusEl.textContent = "Disponible";
+            statusEl.classList.add("disponible");
+        } else {
+            statusEl.textContent = "Agotado";
+            statusEl.classList.add("agotado");
+            }
+        });
+
+        function goToProduct(nombre, precio) {
+        const url = `producto.html?nombre=${encodeURIComponent(nombre)}&precio=${encodeURIComponent(precio)}`;
+        window.location.href = url;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+    body {
+      font-family: 'syne';
+      margin: 0;
+      padding: 0px;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      margin: 0;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .image-container {
+      flex: 1;
+      padding: 30px;
+      background: #fff;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .info-container {
+      flex: 1;
+      padding: 40px 30px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .sku {
+      color: gray;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .tallas {
+      margin: 20px 0;
+    }
+
+    .tallas label {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 10px 16px;
+      border: 1px solid #a5a3a3;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .tallas label:hover {
+        transition: 0.5s;
+        color: #000000;
+        border-color: #000000;
+    }
+
+    .boton {
+      padding: 12px 20px;
+      border: none;
+      background: #000;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    .boton:hover {
+        transition: 0.5s ;
+        color: #000000;
+        background-color: #888;
+    }
+
+
+    ul {
+      margin-top: 30px;
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #888;
+    }
+
+
+    /* Teléfonos */
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+        padding: 0;
+      }
+
+      .image-container,
+      .info-container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .sku {
+        text-align: center;
+        font-size: 13px;
+      }
+
+      .tallas {
+        text-align: center;
+      }
+
+      .tallas label {
+        margin-bottom: 8px;
+      }
+
+      .boton {
+        display: block;
+        margin: 20px auto 0;
+      }
+
+      ul {
+        padding-left: 10px;
+        font-size: 14px;
+      }
+    }
+
+    /* Tablets */
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .image-container,
+      .info-container {
+        padding: 30px 40px;
+      }
+
+      h1 {
+        font-size: 22px;
+        text-align: left;
+      }
+
+      .sku {
+        font-size: 14px;
+      }
+
+      ul {
+        font-size: 15px;
+      }
+    }
+
+    /* Desktops grandes */
+    @media (min-width: 1025px) {
+      .container {
+        flex-direction: row;
+      }
+
+      .info-container {
+        padding: 50px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+

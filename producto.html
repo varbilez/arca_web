@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Producto - Arca</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="producto.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="image-container">
+      <img id="producto-imagen" src="" alt="Producto">
+    </div>
+
+    <div class="info-container">
+      <h1 id="producto-nombre">Nombre del producto</h1>
+      <div class="sku" id="producto-precio">Precio: USD 45.00</div>
+
+      <div>
+        <strong>T-Shirt</strong>
+      </div>
+
+      <div class="tallas">
+        <label>S</label>
+        <label>M</label>
+        <label>L</label>
+        <label>XL</label>
+        <label>XXL</label>
+        <label>XXXL</label>
+      </div>
+
+      <button class="boton" style="font-family: syne;">Añadir a la cesta</button>
+
+      <ul>
+        <li>Logo impreso en frente</li>
+        <li>100% algodón orgánico</li>
+        <li>Lavar con agua fría (30°C)</li>
+        <li>No secar en secadora</li>
+      </ul>
+
+      <div class="footer">Arte por Arca</div>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const nombre = params.get('nombre');
+    const precio = params.get('precio');
+    const imagen = params.get('imagen');
+
+    document.getElementById('producto-nombre').textContent = nombre;
+    document.getElementById('producto-precio').textContent = "Precio: " + precio;
+    document.getElementById('producto-imagen').src = imagen;
+    document.getElementById('producto-imagen').alt = nombre;
+
+
+  </script>
+
+</body>
+</html>
+

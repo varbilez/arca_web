@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arca - Tours</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="tours.css">
+</head>
+<body>
+  <!-- Menús de esquina -->
+  <a href="index.html" class="corner-link top-left" style="font-size: 40px;">Inicio</a>
+  <a href="mercancia.html" class="corner-link top-right" style="font-size: 40px;">Merch</a>
+  <a href="visuales.html" class="corner-link bottom-left" style="font-size: 40px;">Visuales</a>
+
+  <!-- Logo -->
+  <img src="img/arca_logo-removebg-preview(2).png" alt="Logo" class="logo">
+
+
+  <!-- Video de fondo -->
+  <video class="video-bg" src="img/ARCA - Puta.mp4" autoplay loop muted playsinline disablePictureInPicture></video>
+
+  <!-- Contenido de superposición -->
+  <div class="overlay">
+    <h1>TOURS</h1>
+    <button onclick="document.querySelector('.shows-section').style.display = 'block'; window.scrollTo({top: window.innerHeight, behavior: 'smooth'});" >Ver Shows Disponibles</button>
+  </div>
+
+  <!-- Sección de shows -->
+  <section class="shows-section" style="height: max-content;">
+    <div class="show-item">
+      <h3 style="font-family: syne;">CDMX - Auditorio BB</h3>
+      <p style="font-family: syne;">20 de Octubre, 2025</p>
+    </div>
+    <div class="show-item">
+      <h3 style="font-family: syne;">Buenos Aires - Teatro Vorterix</h3>
+      <p style="font-family: syne;">25 de Octubre, 2025</p>
+    </div>
+    <div class="show-item">
+      <h3 style="font-family: syne;">Barcelona - Primavera Sound</h3>
+      <p style="font-family: syne;">5 de Noviembre, 2025</p>
+    </div>
+    <!-- Agrega más shows si lo deseas -->
+  </section>
+
+    <!-- Footer -->
+  <footer>
+      <div class="redes-sociales">
+        <a href="https://open.spotify.com/intl-es/artist/4SQdUpG4f7UbkJG3cJ2Iyj" target="_blank"><i class="fab fa-spotify"></i></a>
+        <a href="https://x.com/arca1000000?lang=es" target="_blank"><i class="fab fa-x"></i></a>
+        <a href="https://www.instagram.com/arca1000000/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@arca1000000" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p style="font-size: 15px;">&copy; 2025 arca Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arca - Visuales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="visuales.css">
+</head>
+<body>
+
+  <!-- Menús de esquina -->
+  <a href="index.html" class="corner-link top-left" style="font-size: 40px;">Inicio</a>
+  <a href="mercancia.html" class="corner-link top-right" style="font-size: 40px;">Merch</a>
+  <a href="tours.html" class="corner-link bottom-left" style="font-size: 40px;">Tours</a>
+
+  <!-- Logo -->
+  <img src="img/arca_logo-removebg-preview(2).png" alt="Logo" class="logo">
+    
+
+  <h1 style="font-size: 70px; cursor: default;">visuales</h1>
+
+  <!-- Visual Gallery -->
+  <div class="gallery" style="object-fit: contain;">
+    <a href="img.visuales/1.jpeg" data-lightbox="visuals"><img src="img.visuales/1.jpeg" alt=""></a>
+    <a href="img.visuales/2.jpeg" data-lightbox="visuals"><img src="img.visuales/2.jpeg" alt=""></a>
+    <a href="img.visuales/3.jpeg" data-lightbox="visuals"><img src="visual3-thumb.jpg" alt=""></a>
+    <a href="img.visuales/4.jpeg" data-lightbox="visuals"><img src="img.visuales/4.jpeg" alt=""></a>
+    <a href="img.visuales/5.jpg" data-lightbox="visuals"><img src="img.visuales/5.jpg" alt=""></a>
+    <a href="img.visuales/6.jpg" data-lightbox="visuals"><img src="img.visuales/6.jpg" alt=""></a>
+    <a href="img.visuales/7.jpg" data-lightbox="visuals"><img src="img.visuales/7.jpg" alt=""></a>
+    <a href="img.visuales/8.jpg" data-lightbox="visuals"><img src="img.visuales/8.jpg" alt=""></a>
+    <a href="img.visuales/9.jpg" data-lightbox="visuals"><img src="img.visuales/9.jpg" alt=""></a>
+    <a href="img.visuales/10.jpg" data-lightbox="visuals"><img src="img.visuales/10.jpg" alt=""></a>
+    <a href="img.visuales/11.jpg" data-lightbox="visuals"><img src="img.visuales/11.jpg" alt=""></a>
+    <a href="img.visuales/12.jpg" data-lightbox="visuals"><img src="img.visuales/12.jpg" alt=""></a>
+    <a href="img.visuales/13.jpg" data-lightbox="visuals"><img src="img.visuales/13.jpg" alt=""></a>
+    <a href="img.visuales/14.jpg" data-lightbox="visuals"><img src="img.visuales/14.jpg" alt=""></a>
+    <a href="img.visuales/15.jpg" data-lightbox="visuals"><img src="img.visuales/15.jpg" alt=""></a>
+    <a href="img.visuales/16.jpg" data-lightbox="visuals"><img src="img.visuales/16.jpg" alt=""></a>
+    <a href="img.visuales/17.jpg" data-lightbox="visuals"><img src="img.visuales/17.jpg" alt=""></a>
+    <a href="img.visuales/18.jpg" data-lightbox="visuals"><img src="img.visuales/18.jpg" alt=""></a>
+    <a href="img.visuales/19.jpg" data-lightbox="visuals"><img src="img.visuales/19.jpg" alt=""></a>
+    <a href="img.visuales/20.jpg" data-lightbox="visuals"><img src="img.visuales/20.jpg" alt=""></a>
+    <a href="img.visuales/21.jpg" data-lightbox="visuals"><img src="img.visuales/21.jpg" alt=""></a>
+    <a href="img.visuales/22.jpg" data-lightbox="visuals"><img src="img.visuales/22.jpg" alt=""></a>
+    <a href="img.visuales/23.jpg" data-lightbox="visuals"><img src="img.visuales/23.jpg" alt=""></a>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="closeOverlay()">
+    <img id="overlay-img" src="" alt="zoomed visual" />
+  </div>
+
+  <!-- Footer -->
+  <footer>
+      <div class="redes-sociales">
+        <a href="https://open.spotify.com/intl-es/artist/4SQdUpG4f7UbkJG3cJ2Iyj" target="_blank"><i class="fab fa-spotify"></i></a>
+        <a href="https://x.com/arca1000000?lang=es" target="_blank"><i class="fab fa-x"></i></a>
+        <a href="https://www.instagram.com/arca1000000/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@arca1000000" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p style="font-size: 15px;">&copy; 2025 arca Todos los derechos reservados.</p>
+  </footer>
+  <script>
+    function enlarge(img) {
+      const overlay = document.getElementById('overlay');
+      const overlayImg = document.getElementById('overlay-img');
+      overlayImg.src = img.src;
+      overlay.style.display = 'flex';
+    }
+
+    function closeOverlay() {
+      const overlay = document.getElementById('overlay');
+      overlay.style.display = 'none';
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>

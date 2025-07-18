@@ -1,0 +1,250 @@
+    @font-face {
+        font-family: "KiCk-Regular.otf" ;
+        src: url(KiCk-Regular.otf);
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: "KiCk-Regular.otf";
+    }
+
+    body {
+      background-image: url('fondo.jpg'); /* Cambia por tu imagen de fondo */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .contenedor {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Menú en esquinas */
+    .corner-link {
+      position: fixed;
+      padding: 8px 12px;
+      background: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-size: 14px;
+      border-radius: 4px;
+      z-index: 1000;
+    }
+
+    .corner-link:hover {
+      text-shadow:
+         -1px -1px 0 rgb(0, 0, 0),
+         1px -1px 0 rgb(0, 0, 0),
+         -1px  1px 0 rgb(0, 0, 0),
+         1px  1px 0 rgb(0, 0, 0);
+      color: rgb(240, 238, 238) ;
+      transition: 0.4s;
+    }
+
+    .top-left    { top: 10px; left: 10px; }
+    .top-right   { top: 10px; right: 10px; }
+    .bottom-left { bottom: 10px; left: 10px; }
+
+    .logo {
+      position: relative;
+      margin: 20px auto 0;
+      width: 100px;
+    }
+
+    main {
+      flex: 1;
+      padding: 50px 20px;
+      min-height: 70vh; /* 👈 Asegura altura mínima */
+      text-align: center;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    main h2 {
+      font-size: 40px;
+      color: rgb(0, 0, 0);
+    }
+
+
+    /* Formulario */
+    .formulario {
+      text-align: center;
+      margin: 30px auto;
+      text-shadow: none;
+      background-color: #ffffff;
+    }
+
+    .formulario input[type="email"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 250px;
+      border: none;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    .formulario input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #000000;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: "KiCk-Regular.otf";
+      font-size: 30px;
+    }
+
+    .formulario input[type="submit"]:hover {
+      background-color: #ffffff;
+      color: #000000;
+      transition: 0.4s;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ffffff;
+      font-family: "syne";
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 20px 10px;
+      margin: 0;
+    }
+
+    .redes-sociales a {
+      color: rgb(0, 0, 0);
+      margin: 0 10px;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+
+    .redes-sociales a:hover {
+        text-shadow:
+         -1px -1px 0 rgb(0, 0, 0),
+         1px -1px 0 rgb(0, 0, 0),
+         -1px  1px 0 rgb(0, 0, 0),
+         1px  1px 0 rgb(0, 0, 0);
+      color: rgb(240, 238, 238) ;
+      transition: 0.4s;
+    }
+
+    /* MÓVILES: Pantallas menores a 600px */
+    @media (max-width: 600px) {
+      .corner-link {
+        font-size: 22px;
+        padding: 6px 8px;
+      }
+
+      .logo {
+        width: 80px;
+        margin-top: 10px;
+      }
+
+      main {
+        padding: 30px 10px;
+      }
+
+      main h2 {
+        font-size: 18px;
+      }
+
+      .formulario input[type="email"] {
+        width: 180px;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .formulario input[type="submit"] {
+        font-size: 20px;
+        padding: 8px 16px;
+      }
+
+      .foto {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      footer p {
+        font-size: 13px;
+      }
+
+      .redes-sociales a {
+        font-size: 18px;
+      }
+    }
+
+    /* TABLETS: Entre 601px y 1024px */
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .corner-link {
+        font-size: 28px;
+        padding: 8px 10px;
+      }
+
+      .logo {
+        width: 90px;
+        margin-top: 15px;
+      }
+
+      main {
+        padding: 40px 20px;
+      }
+
+      main h2 {
+        font-size: 24px;
+      }
+
+      .formulario input[type="email"] {
+        width: 220px;
+        font-size: 15px;
+      }
+
+      .formulario input[type="submit"] {
+        font-size: 25px;
+      }
+
+      .foto {
+        width: 100%;
+        height: auto;
+      }
+
+      footer p {
+        font-size: 14px;
+      }
+
+      .redes-sociales a {
+        font-size: 20px;
+      }
+    }
+
+    /* DESKTOP: Pantallas grandes */
+    @media (min-width: 1025px) {
+      .corner-link {
+        font-size: 40px;
+      }
+
+      .logo {
+        width: 100px;
+      }
+
+      .formulario input[type="email"] {
+        width: 250px;
+        font-size: 16px;
+      }
+
+      .formulario input[type="submit"] {
+        font-size: 30px;
+      }
+
+      .foto {
+        width: 800px;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+    }

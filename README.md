@@ -1,1 +1,1 @@
-# arca_web
+Buenos días profesor. Soy Valeria Mulato y le presento mi trabajo final. Creé una página web para la artista Arca. Se visualizan un menú con inicio, tours, merch y visuales. 

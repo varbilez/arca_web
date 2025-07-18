@@ -1,0 +1,184 @@
+    @font-face {
+        font-family: "KiCk-Regular.otf" ;
+        src: url(KiCk-Regular.otf);
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    body {
+      margin-left: 150px;
+      margin-right: 150px;
+      padding: 0;
+      font-family: "KiCk-Regular.otf";
+      background-color: #fff;
+      color: #000;
+      overflow-x: hidden;
+    }
+
+    /* Menú esquinas */
+    .corner-link {
+      position: fixed;
+      font-size: 40px;
+      z-index: 1000;
+      padding: 8px 12px;
+      color: rgb(0, 0, 0);
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    .corner-link:hover {
+      text-shadow:
+         -1px -1px 0 rgb(0, 0, 0),
+         1px -1px 0 rgb(0, 0, 0),
+         -1px  1px 0 rgb(0, 0, 0),
+         1px  1px 0 rgb(0, 0, 0);
+      color: rgb(240, 238, 238) ;
+      transition: 0.4s;
+    }
+
+    .top-left { top: 10px; left: 10px; }
+    .top-right { top: 10px; right: 10px; }
+    .bottom-left { bottom: 10px; left: 10px; }
+
+    /* Título */
+    h1 {
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin: 80px 0 40px;
+      text-align: center;
+    }
+
+    .gallery {
+        column-count: 3;
+        column-gap: 1rem;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .gallery img {
+        width: 100%;
+        margin-bottom: 1rem;
+        break-inside: avoid;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s ease, filter 0.3s ease;
+        filter: grayscale(20%) contrast(90%);
+        animation: fadeIn 0.8s ease-in-out;
+  }
+
+    .gallery img:hover {
+        transform: scale(1.03);
+        filter: none;
+  }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      display: none;
+    }
+
+    .overlay img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 8px;
+    }
+
+    .logo {
+      position: relative;
+      width: 100px;
+      top: 4px;
+      left: 44%;
+      padding: 8px 12px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ffffff;
+      font-family: "syne";
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 20px 10px;
+      margin: 0;
+    }
+
+    .redes-sociales a {
+      color: rgb(0, 0, 0);
+      margin: 0 10px;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+
+    .redes-sociales a:hover {
+        text-shadow:
+         -1px -1px 0 rgb(0, 0, 0),
+         1px -1px 0 rgb(0, 0, 0),
+         -1px  1px 0 rgb(0, 0, 0),
+         1px  1px 0 rgb(0, 0, 0);
+      color: rgb(240, 238, 238) ;
+      transition: 0.4s;
+    }
+
+    /* === TABLET (pantallas hasta 1024px) === */
+    @media (max-width: 1024px) {
+      body {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+      .gallery {
+        column-count: 2; /* de 3 columnas → 2 */
+      }
+    }
+
+    /* === MÓVIL (pantallas hasta 768px) === */
+    @media (max-width: 768px) {
+      body {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .gallery {
+        column-count: 1; /* de 2 columnas → 1 */
+      }
+
+      footer {
+        font-size: 14px;
+      }
+
+      .logo {
+        left: 35%;
+        width: 80px;
+      }
+    }
+
+    /* === PANTALLAS PEQUEÑAS (< 480px) === */
+    @media (max-width: 480px) {
+      body {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .gallery {
+        column-count: 1;
+      }
+
+      footer {
+        font-size: 12px;
+      }
+
+      .logo {
+        width: 70px;
+        left: 32%;
+      }
+    }

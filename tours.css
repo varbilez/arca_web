@@ -1,0 +1,254 @@
+    @font-face {
+        font-family: "KiCk-Regular.otf" ;
+        src: url(KiCk-Regular.otf);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "KiCk-Regular.otf";
+      background: #ffffff;
+      color: #000000;
+      overflow-x: hidden;
+    }
+
+    /* Menú esquinas */
+    .corner-link {
+      position: fixed;
+      font-size: 40px;
+      z-index: 1000;
+      padding: 8px 12px;
+      color: rgb(0, 0, 0);
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    .corner-link:hover {
+      text-shadow:
+         -1px -1px 0 rgb(0, 0, 0),
+         1px -1px 0 rgb(0, 0, 0),
+         -1px  1px 0 rgb(0, 0, 0),
+         1px  1px 0 rgb(0, 0, 0);
+      color: rgb(240, 238, 238) ;
+      transition: 0.4s;
+    }
+
+    .top-left { top: 10px; left: 10px; }
+    .top-right { top: 10px; right: 10px; }
+    .bottom-left { bottom: 10px; left: 10px; }
+
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(60%) contrast(120%) grayscale(20%);
+    }
+
+    .overlay {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .overlay h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      letter-spacing: 6px;
+    }
+
+    .overlay button {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border: 2px solid #000000;
+      background: transparent;
+      color: #000000;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      font-family: "syne";
+    }
+
+    .overlay button:hover {
+      background: #000000;
+      color: #ffffff;
+    }
+
+    .shows-section {
+      background-color: #ffffff;
+      color: #000000;
+      padding: 4rem 2rem;
+      display: none;
+    }
+
+    .show-item {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #444;
+      padding-bottom: 1rem;
+    }
+
+    .show-item h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .logo {
+      position: relative;
+      margin: 20px auto 0;
+      width: 100px;
+      left: 46.5%;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ffffff;
+      font-family: "syne";
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 20px 10px;
+      margin: 0;
+    }
+
+    .redes-sociales a {
+      color: rgb(0, 0, 0);
+      margin: 0 10px;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+
+    .redes-sociales a:hover {
+        text-shadow:
+         -1px -1px 0 rgb(0, 0, 0),
+         1px -1px 0 rgb(0, 0, 0),
+         -1px  1px 0 rgb(0, 0, 0),
+         1px  1px 0 rgb(0, 0, 0);
+      color: rgb(240, 238, 238) ;
+      transition: 0.4s;
+    }
+
+    /* teléfonos */
+    @media (max-width: 600px) {
+    .overlay {
+        padding: 0 1rem;
+    }
+
+    .overlay h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .overlay button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        width: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .corner-link {
+        font-size: 28px;
+        padding: 4px 8px;
+    }
+
+    .shows-section {
+        padding: 2rem 1rem;
+    }
+
+    .show-item h3 {
+        font-size: 1rem;
+    }
+
+    .show-item p {
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
+
+    .redes-sociales a {
+        font-size: 18px;
+    }
+    }
+
+    /* Tablets (pantallas medianas) */
+    @media (min-width: 601px) and (max-width: 1024px) {
+    .overlay h1 {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+
+    .overlay button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .corner-link {
+        font-size: 32px;
+    }
+
+    .logo {
+        width: 90px;
+        left: 47.5%;
+        transform: translateX(-50%);
+    }
+
+    .shows-section {
+        padding: 3rem 2rem;
+    }
+
+    .show-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .show-item p {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .redes-sociales a {
+        font-size: 20px;
+    }
+    }
+
+    /* Pantallas grandes (Desktop) */
+    @media (min-width: 1025px) {
+    .overlay h1 {
+        font-size: 3rem;
+    }
+
+    .overlay button {
+        font-size: 1.1rem;
+    }
+
+    .show-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .show-item p {
+        font-size: 1.1rem;
+    }
+
+    .logo {
+        width: 100px;
+        left: 46.5%;
+        transform: translateX(0);
+    }
+    }
